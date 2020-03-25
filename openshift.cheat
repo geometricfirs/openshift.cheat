@@ -1,0 +1,16 @@
+% openshift
+
+# Login to a cluster (default port)
+oc login -u <user> -p <password> <url>:6443
+
+# Create a project
+oc new-project <project>
+
+# Add admin rights to service account
+oc adm policy add-role-to-user admin -z <account>
+
+# Deploy CRD from YAML file
+oc create -f <crd_file>
+
+# List pods
+oc get pods
