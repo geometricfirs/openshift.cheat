@@ -23,3 +23,9 @@ oc new-app <container>
 
 # Allow to run containers as root
 oc adm policy add-scc-to-user anyuid -z default
+
+# Get a secret in a namespace as json
+oc get secrets -n <namespace> <secret-name> -o json
+
+# Delete all resource associated with an app
+oc delete all --selector app=<app-name>
