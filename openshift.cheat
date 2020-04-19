@@ -32,3 +32,12 @@ oc get secrets -n <namespace> <secret-name> -o json
 
 # Delete all resource associated with an app
 oc delete all --selector app=<app-name>
+
+# Get cluster information
+oc describe node
+
+# Get information about an image stream
+oc describe is/<imagestream>
+
+# Delete an image stream
+oc delete is/<imagestream>
