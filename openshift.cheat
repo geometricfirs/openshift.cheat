@@ -6,6 +6,9 @@ oc login -u <user> -p <password> <url>:6443
 # Create a project
 oc new-project <project>
 
+# Delete a project
+oc delete project <project>
+
 # Add admin rights to service account
 oc adm policy add-role-to-user admin -z <account>
 
@@ -29,3 +32,12 @@ oc get secrets -n <namespace> <secret-name> -o json
 
 # Delete all resource associated with an app
 oc delete all --selector app=<app-name>
+
+# Get cluster information
+oc describe node
+
+# Get information about an image stream
+oc describe is/<imagestream>
+
+# Delete an image stream
+oc delete is/<imagestream>
